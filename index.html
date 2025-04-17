@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Sound Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+     
+        <div class="main-box">
+            <h1>Find the animal based off its sound!</h1>
+            <p>What sound does a cow make? Mooo, so click on the cow when you hear it go moo!</p>
+            
+            <!-- DROPDOWN MENU -->
+            <div class="dropdown-section">
+                <label for="animal-select">Find a</label>
+                <select id="animal-select">
+                    <option value="cow">Cow</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="goat">Goat</option>
+                    <option value="sheep">Sheep</option>
+                </select>
+            </div>
+
+            <!-- THE SMALLER BOX -->
+            <div class="animal-prompt-box clickable" id="animal-prompt">
+                Find a cow
+            </div>
+            
+            <div class="audio-reminder">
+                <p class="bold">Make sure to turn on your audio before playing</p>
+                <img src="speaker.svg" alt="Speaker icon" class="speaker-icon">
+            </div>
+        </div>
+    </div>
+
+
+<!--play screen-->
+
+<!--sounds-->
+<audio id="cow-sound" src="cow.mp3"></audio>
+<audio id="chicken-sound" src="chicken.mp3"></audio>
+<audio id="goat-sound" src="goat.mp3"></audio>
+<audio id="sheep-sound" src="sheep.mp3"></audio>
+
+<div class="play-screen hidden">
+    <div class="main-box">
+      <!--replay bar-->
+      <div class="sound-replay">
+        <img src="speaker.svg" alt="Speaker" class="speaker-icon">
+        <div class="replay-box">Replay sound</div>
+        <img src="cow.png" alt="Current animal" class="current-animal">
+      </div>
+  
+      <div class="play-area">
+        <div class="animal-option" data-animal="cow">
+          <img src="cow.png" alt="Cow">
+        </div>
+        <div class="animal-option" data-animal="chicken">
+          <img src="chicken.png" alt="Chicken">
+        </div>
+        <div class="animal-option" data-animal="goat">
+          <img src="goat.png" alt="Goat">
+        </div>
+        <div class="animal-option" data-animal="sheep">
+          <img src="sheep.png" alt="Sheep">
+        </div>
+      </div>
+  
+      <div class="instruction-strip">
+        Click the animal according to its sound!
+      </div>
+    </div>
+  </div>
+
+
+    <!-- results screen -->
+
+    <div class="results-screen hidden">
+      <div class="main-box">
+          <h1>Congratulations!</h1>
+          <p>You found one! Find another animal to play again.</p>
+         
+          <div class="dropdown-section">
+              <label for="results-animal-select">Find a</label>
+              <select id="results-animal-select">
+                  <option value="cow">Cow</option>
+                  <option value="chicken">Chicken</option>
+                  <option value="goat">Goat</option>
+                  <option value="sheep">Sheep</option>
+              </select>
+          </div>
+         
+          <div class="animal-prompt-box clickable" id="results-animal-prompt">
+              Find a cow
+          </div>
+          
+          <div class="results-2">
+              <img src="cow.png" alt="Found animal" id="results-animal-img" class="found-animal">
+          </div>
+      </div>
+  </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
